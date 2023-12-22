@@ -27,10 +27,13 @@
                             <a class="nav-link active" aria-current="page" href="/index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/inc/pages/article.php">Article</a>
+                            <a class="nav-link" href="/article.php">Article</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/inc/pages/a-propos.php">A Propos</a>
+                            <a class="nav-link" href="/a-propos.php">A Propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/inscription.php">inscription</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
