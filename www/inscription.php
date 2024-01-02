@@ -11,10 +11,11 @@ if ($_POST) {
     // debug($_POST['email']);
     $utilisateur = executeRequete("SELECT * FROM utilisateur WHERE slug='$_POST[pseudo]'");
     if ($utilisateur->num_rows > 0) {
-        // Problème
+        $contenu .= "<div class='erreur'>Pseudo indisponible. Veuillez en choisir un autre svp.</div>";
     } else {
         $_POST['passwrd'] = password_hash($_POST['passwrd'], PASSWORD_BCRYPT);
         executeRequete("INSERT INTO utilisateur (slug, email, passwrd, is_admin) VALUES ('$_POST[pseudo]', '$_POST[email]', '$_POST[passwrd]', 0)");
+        header("location: connexion.php");
         // Utilisateur ajouté avec succès
     }
 }
@@ -25,6 +26,7 @@ if ($_POST) {
 <br>
 <br>
 <h1>Inscription</h1>
+<?php echo $contenu ?>
 <form method="post">
     <div class="form-group">
         <label for="exampleInputEmail1">Votre pseudo</label>
