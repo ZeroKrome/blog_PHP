@@ -19,7 +19,6 @@ if ($_POST) {
         // Utilisateur ajouté avec succès
     }
 }
-
 ?>
 
 

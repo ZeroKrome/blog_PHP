@@ -1,9 +1,14 @@
 <?php
 
-$mysqli = new mysqli("localhost", "db_user", "223105", "blog");
+$host = $_ENV['MYSQL_HOST'];
+$username = $_ENV['MYSQL_USER'];
+$password = $_ENV['MYSQL_PASSWORD'];
+$database = $_ENV['MYSQL_DATABASE'];
+
+$mysqli = new mysqli($host, $username, $password, $database);
 if ($mysqli->connect_error) die("un problème est survenu lors de la tentative de connxion a la BDD:.$mysqli->connect_error");
 
-require('/PROJET/blog/inc/fonction.php');
+require('fonction.php');
 
 $contenu = '';
 // $pdo = new PDO('mysql:host=localhost;dbname=blog', "root", "Nayah441#", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
