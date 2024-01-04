@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $host = $_ENV['MYSQL_HOST'];
 $username = $_ENV['MYSQL_USER'];
 $password = $_ENV['MYSQL_PASSWORD'];

@@ -7,7 +7,7 @@ if (isset($_GET['action']) && $_GET['action'] === "deconnexion") {
     session_destroy();
 }
 if (internauteEstConnecte()) {
-    header("location: profil.php")
+    header("location: profil.php");
 }
 
 // action + redirection profil

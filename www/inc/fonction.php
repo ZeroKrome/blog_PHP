@@ -32,7 +32,7 @@ function debug($var, $mode = 1)
 
 function internauteEstConnecte()
 {
-    if (!isees($_SESSION['utilisateur'])) {
+    if (!isset($_SESSION['utilisateur'])) {
         return false;
     } else {
         return true;
