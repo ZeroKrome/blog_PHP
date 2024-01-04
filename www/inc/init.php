@@ -10,6 +10,7 @@ if ($mysqli->connect_error) die("un problème est survenu lors de la tentative d
 
 require('fonction.php');
 
+
 $contenu = '';
 // $pdo = new PDO('mysql:host=localhost;dbname=blog', "root", "Nayah441#", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
